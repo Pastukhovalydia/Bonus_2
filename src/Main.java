@@ -6,7 +6,7 @@ public class Main {
 
         int bonusPer100Rubles = 1;
 
-        int bonusEarned = (topUpAmount / 100) * bonusPer100Rubles;
+        int bonusEarned = (topUpAmount > 1000) ? ((topUpAmount - 1000) / 100) * bonusPer100Rubles : 0;
         int totalBalance = currentBalance + topUpAmount + bonusEarned;
 
         System.out.println("Итоговый счет: " + totalBalance + " рублей");
